@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>B2B Teklif Sepeti & RFQ Hub | Derya Mensucat Sanayi A.Ş.</title>
+  <meta name="description" content="Derya Mensucat B2B teklif sepetinizdeki teknik ağları ve iplikleri inceleyin, doğrudan Telegram ve WhatsApp ile anında teklif talebi oluşturun."/>
+  <meta property="og:title" content="B2B Teklif Sepeti - Derya Mensucat"/>
+  <meta property="og:description" content="Teklif sepetinizi anında fabrikaya iletin."/>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CDN & Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#000e1d",
+            "primary-container": "#0e2439",
+            "on-primary": "#ffffff",
+            "on-primary-container": "#778ca5",
+            "primary-fixed": "#d0e4ff",
+            "primary-fixed-dim": "#b3c8e4",
+            "secondary": "#39608f",
+            "secondary-container": "#a2c9fe",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#2b5482",
+            "tertiary": "#000e1b",
+            "tertiary-container": "#00253c",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-container": "#2691d4",
+            "background": "#faf8ff",
+            "surface": "#faf8ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f2f3ff",
+            "surface-container": "#eaedff",
+            "surface-container-high": "#e2e7ff",
+            "surface-container-highest": "#dae2fd",
+            "on-surface": "#131b2e",
+            "on-surface-variant": "#43474d",
+            "outline": "#74777d",
+            "outline-variant": "#c4c6cd",
+            "error": "#ba1a1a",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-2xl": "4rem",
+            "gutter": "1.5rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "margin-mobile": "1.25rem",
+          },
+          fontFamily: {
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "display-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "title-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-caps": ["Inter", "sans-serif"],
+            "data-mono": ["Inter", "monospace"],
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+
+  <!-- HEADER -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-outline-variant/30">
+    <div class="h-20 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-gutter">
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-space-md text-inherit no-underline">
+        <div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-white shadow-sm font-bold text-xl tracking-tighter">
+          DM
+        </div>
+        <div class="flex flex-col">
+          <span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary leading-none font-bold">DERYA MENSUCAT</span>
+          <span class="font-label-caps text-[10px] uppercase tracking-wider text-secondary mt-1 font-semibold">AĞ SANAYİ & TİCARET • EST. 1978</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden xl:flex items-center gap-1">
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" data-nav="home" href="index.html">ANA SAYFA</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" data-nav="about" href="about.html">KURUMSAL</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" data-nav="products" href="products.html">ÜRÜNLER</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" href="products.html#uygulamalar">UYGULAMALAR</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" href="about.html#kalite">KALİTE</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" href="about.html#referanslar">REFERANSLAR</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" href="about.html#makine-parki">KÜTÜPHANE</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" href="products.html#kapasite-tablosu">E-KATALOG</a>
+        <a class="nav-link font-title-md text-title-md text-on-surface-variant hover:text-on-surface px-3 py-1.5 rounded-lg transition-colors" data-nav="contact" href="contact.html">İLETİŞİM</a>
+      </nav>
+
+      <!-- Action Utilities -->
+      <div class="flex items-center gap-space-sm">
+        <div class="hidden sm:flex items-center p-0.5 rounded-lg bg-surface-container-low border border-outline-variant/40">
+          <button class="btn-lang-tr px-2 py-1 font-label-caps text-label-caps rounded bg-primary-container text-on-primary font-bold transition-all" onclick="setLanguage('tr')" type="button">TR</button>
+          <button class="btn-lang-en px-2 py-1 font-label-caps text-label-caps rounded text-on-surface-variant hover:text-on-surface transition-all" onclick="setLanguage('en')" type="button">EN</button>
+        </div>
+
+        <a class="relative w-9 h-9 flex items-center justify-center rounded-lg bg-primary-container text-white shadow-sm" href="cart.html" title="Teklif Sepeti">
+          <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+          <span class="cart-badge-count absolute top-1 right-1 w-4 h-4 rounded-full bg-secondary text-on-secondary font-data-mono text-[10px] flex items-center justify-center font-bold">0</span>
+        </a>
+
+        <a class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#229ED9] text-white hover:opacity-95 transition-opacity font-label-caps text-label-caps tracking-wider font-semibold shadow-sm" href="https://t.me/share/url?url=https%3A%2F%2Fderyamensucat.com.tr&text=Merhaba%20Derya%20Mensucat" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">send</span>
+          <span>TELEGRAM</span>
+        </a>
+
+        <a class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#25D366] text-white hover:opacity-95 transition-opacity font-label-caps text-label-caps tracking-wider font-semibold shadow-sm" href="https://wa.me/905326128383" rel="noopener noreferrer" target="_blank">
+          <span class="material-symbols-outlined text-[16px]">chat</span>
+          <span>WHATSAPP</span>
+        </a>
+
+        <a class="hidden sm:flex items-center px-4 py-2 rounded-lg bg-primary hover:bg-secondary text-on-primary transition-colors font-label-caps text-label-caps tracking-wider uppercase font-semibold shadow-sm" href="contact.html">
+          TEKLİF AL
+        </a>
+
+        <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="xl:hidden w-9 h-9 flex items-center justify-center rounded-lg text-primary hover:bg-surface-container-high transition-colors" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu-drawer" class="hidden xl:hidden bg-surface-container-lowest border-b border-outline-variant/30 px-margin-mobile py-4 flex flex-col gap-2">
+      <a class="px-3 py-2 rounded-lg hover:bg-surface-container text-on-surface font-title-md" href="index.html">ANA SAYFA</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-surface-container text-on-surface font-title-md" href="about.html">KURUMSAL & FABRİKA</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-surface-container text-on-surface font-title-md" href="products.html">ÜRÜNLER & KATALOG</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-surface-container text-on-surface font-title-md" href="product-detail.html">ÖRNEK ÜRÜN DETAYI</a>
+      <a class="px-3 py-2 rounded-lg bg-primary-container text-on-primary font-title-md" href="cart.html">B2B TEKLİF SEPETİ</a>
+      <a class="px-3 py-2 rounded-lg hover:bg-surface-container text-on-surface font-title-md" href="contact.html">İLETİŞİM & RFQ</a>
+    </div>
+  </header>
+
+  <!-- MAIN BODY -->
+  <main class="w-full pt-20 bg-background">
+    <!-- PAGE TITLE BANNER -->
+    <section class="bg-primary-container text-on-primary py-10 border-b border-outline-variant/20">
+      <div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2 text-xs font-label-caps text-on-primary-container mb-2">
+            <a href="index.html" class="hover:text-white transition-colors">Ana Sayfa</a>
+            <span>/</span>
+            <span class="text-white font-bold">B2B Teklif Sepeti & RFQ Hub</span>
+          </div>
+          <h1 class="font-display-xl text-2xl md:text-4xl font-extrabold text-white">
+            Teklif Sepetiniz ve Şartname Özeti
+          </h1>
+          <p class="font-body-md text-on-primary-container text-xs md:text-sm mt-1">
+            Seçtiğiniz endüstriyel ağları ve miktarları düzenleyin; doğrudan Telegram ve WhatsApp ile anında fabrikaya iletin.
+          </p>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="restoreDefaultCart()" class="px-3 py-2 rounded-lg bg-surface-container-highest/20 hover:bg-surface-container-highest/30 text-white font-title-md text-xs border border-outline-variant/30 transition-colors flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">restart_alt</span>
+            <span>Örnek Ürünleri Yükle</span>
+          </button>
+          <button onclick="clearCart()" class="px-3 py-2 rounded-lg bg-error/20 hover:bg-error/30 text-white font-title-md text-xs border border-error/40 transition-colors flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[16px]">delete_sweep</span>
+            <span>Sepeti Temizle</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CART WORKSPACE SECTION -->
+    <section class="py-10 max-w-[1360px] mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- LEFT: CART ITEMS LIST -->
+        <div class="lg:col-span-7 flex flex-col gap-4">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 shadow-sm">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-outline-variant/20">
+              <h2 class="font-headline-sm text-lg font-bold text-primary flex items-center gap-2">
+                <span>Sepetteki Ürünler</span>
+                <span id="cart-items-counter" class="text-xs px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-data-mono font-bold">0 Kalem</span>
+              </h2>
+              <a href="products.html" class="text-xs font-title-md text-secondary hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">add</span>
+                <span>Katalogdan Ürün Ekle</span>
+              </a>
+            </div>
+
+            <!-- Dynamic Cart Items Container -->
+            <div id="cart-items-container" class="divide-y divide-outline-variant/20">
+              <!-- Rendered via JS -->
+            </div>
+
+            <!-- Empty Cart Fallback -->
+            <div id="cart-empty-message" class="hidden py-12 text-center flex-col items-center justify-center">
+              <span class="material-symbols-outlined text-5xl text-outline-variant mb-3">shopping_cart_off</span>
+              <h3 class="font-title-md font-bold text-primary text-base">Teklif Sepetiniz Boş</h3>
+              <p class="text-xs text-on-surface-variant max-w-sm mt-1 mb-4">
+                Henüz sepetinize ağ veya iplik eklemediniz. Katalogdan dilediğiniz ürünü ekleyebilir ya da örnek listeyi yükleyebilirsiniz.
+              </p>
+              <div class="flex items-center gap-3">
+                <a href="products.html" class="px-4 py-2 rounded-lg bg-primary hover:bg-secondary text-white font-title-md text-xs font-bold transition-colors">
+                  Ürünleri İncele
+                </a>
+                <button onclick="restoreDefaultCart()" class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-md text-xs font-bold transition-colors">
+                  Örnek Ürünleri Ekle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Telegram & WhatsApp Preview Box -->
+          <div class="bg-surface-container-low p-5 rounded-2xl border border-outline-variant/30">
+            <h3 class="font-title-md text-xs font-bold text-primary uppercase tracking-wider mb-2 flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-secondary">preview</span>
+              <span>Otomatik Hazırlanan RFQ Mesaj Önizlemesi</span>
+            </h3>
+            <pre id="order-message-preview" class="p-3.5 bg-surface-container-lowest rounded-xl border border-outline-variant/30 text-xs font-data-mono text-on-surface-variant whitespace-pre-wrap leading-relaxed max-h-56 overflow-y-auto">
+Mesaj önizlemesi yükleniyor...
+            </pre>
+          </div>
+        </div>
+
+        <!-- RIGHT: CUSTOMER & SHIPMENT DETAILS & INSTANT SUBMIT -->
+        <div class="lg:col-span-5 flex flex-col gap-4">
+          <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/30 shadow-md">
+            <h2 class="font-headline-sm text-lg font-bold text-primary pb-3 mb-4 border-b border-outline-variant/20 flex items-center justify-between">
+              <span>Firma & Sevkiyat Bilgileri</span>
+              <span class="text-[11px] font-label-caps text-secondary font-bold">1-Tıkla İletim</span>
+            </h2>
+
+            <div class="space-y-3.5">
+              <div>
+                <label class="block text-xs font-title-md font-semibold text-primary mb-1">Yetkili Adı Soyadı *</label>
+                <input type="text" id="order-contact" oninput="updateMessagePreview()" placeholder="Örn: Kaptan Mustafa Şen" class="w-full px-3 py-2 text-sm bg-surface-container-low border border-outline-variant/40 rounded-lg text-on-surface focus:outline-none focus:border-secondary transition-colors"/>
+              </div>
+
+              <div>
+                <label class="block text-xs font-title-md font-semibold text-primary mb-1">Firma / Gemi / Tekne Adı *</label>
+                <input type="text" id="order-company" oninput="updateMessagePreview()" placeholder="Örn: Karadeniz Balıkçılık & Gırgır" class="w-full px-3 py-2 text-sm bg-surface-container-low border border-outline-variant/40 rounded-lg text-on-surface focus:outline-none focus:border-secondary transition-colors"/>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-title-md font-semibold text-primary mb-1">İletişim Tel / GSM *</label>
+                  <input type="tel" id="order-phone" oninput="updateMessagePreview()" placeholder="0532..." class="w-full px-3 py-2 text-sm bg-surface-container-low border border-outline-variant/40 rounded-lg text-on-surface focus:outline-none focus:border-secondary transition-colors"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-title-md font-semibold text-primary mb-1">Teslim Limanı / İl</label>
+                  <input type="text" id="order-location" oninput="updateMessagePreview()" placeholder="Samsun Limanı" class="w-full px-3 py-2 text-sm bg-surface-container-low border border-outline-variant/40 rounded-lg text-on-surface focus:outline-none focus:border-secondary transition-colors"/>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-title-md font-semibold text-primary mb-1">Özel Şartname, Donam veya Notlar</label>
+                <textarea id="order-notes" rows="2" oninput="updateMessagePreview()" placeholder="Mantar yaka aralığı, kurşun ağırlığı veya özel fiksaj talepleri..." class="w-full px-3 py-2 text-sm bg-surface-container-low border border-outline-variant/40 rounded-lg text-on-surface focus:outline-none focus:border-secondary transition-colors"></textarea>
+              </div>
+            </div>
+
+            <!-- DISPATCH BUTTONS -->
+            <div class="mt-6 pt-4 border-t border-outline-variant/20 flex flex-col gap-2.5">
+              <!-- Telegram Button -->
+              <button onclick="dispatchCartViaTelegram()" class="w-full py-3.5 px-4 rounded-xl bg-[#229ED9] hover:opacity-95 text-white font-title-md text-sm font-bold shadow-md flex items-center justify-center gap-2 transition-all">
+                <span class="material-symbols-outlined text-[20px]">send</span>
+                <span>Sepeti Telegram ile Fabrikaya İlet</span>
+              </button>
+
+              <!-- WhatsApp Button -->
+              <button onclick="dispatchCartViaWhatsApp()" class="w-full py-3.5 px-4 rounded-xl bg-[#25D366] hover:opacity-95 text-white font-title-md text-sm font-bold shadow-md flex items-center justify-center gap-2 transition-all">
+                <span class="material-symbols-outlined text-[20px]">chat</span>
+                <span>Sepeti WhatsApp ile Fabrikaya İlet</span>
+              </button>
+
+              <!-- Print / Save as PDF Button -->
+              <button onclick="window.print()" class="w-full py-2 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary font-title-md text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors">
+                <span class="material-symbols-outlined text-[16px]">print</span>
+                <span>Teklif Formunu Yazdır / PDF Kaydet</span>
+              </button>
+            </div>
+
+            <!-- Assurance guarantees -->
+            <div class="mt-4 pt-3 border-t border-outline-variant/20 space-y-1.5 text-[11px] text-on-surface-variant font-body-sm">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#25D366] text-[16px]">check</span>
+                <span>Doğrudan Gebze OSB Üretim Fiyatı</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#25D366] text-[16px]">check</span>
+                <span>2 Saat İçinde Resmi Termin & Fiyat Yanıtı</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-[#25D366] text-[16px]">check</span>
+                <span>MTC ve Akredite Çekme Test Raporu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-surface-container-low text-on-surface border-t border-outline-variant/30 pt-16 pb-12">
+    <div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <div class="flex flex-col gap-space-sm">
+        <div class="flex items-center gap-2 mb-2">
+          <div class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold text-sm">DM</div>
+          <span class="font-headline-sm text-headline-sm uppercase tracking-tight text-primary font-bold">DERYA MENSUCAT</span>
+        </div>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Türkiye'nin öncü balık ve teknik ağ üreticisi. 1978'den beri tecrübe, mukavemet ve endüstriyel mühendislik.
+        </p>
+        <div class="flex items-center gap-2 text-secondary mt-2">
+          <span class="material-symbols-outlined text-[18px]">verified</span>
+          <span class="font-label-caps text-label-caps uppercase tracking-wider font-bold">ISO 9001:2015 Belgeli Üretim</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-title-md text-title-md uppercase tracking-wider text-primary border-b border-outline-variant/30 pb-2 mb-2 font-bold">ÜRÜNLER</h3>
+        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="products.html">Balık Ağları</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Gırgır Ağları</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Çiftlik / Kafes Ağları</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Güvenlik Ağları (EN 1263-1)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Endüstriyel & Depo Ağları</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Spor Sahası Filesi</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Zirai & Dolu Ağları</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">Derya & Penguen İplikleri</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-title-md text-title-md uppercase tracking-wider text-primary border-b border-outline-variant/30 pb-2 mb-2 font-bold">KURUMSAL & MÜHENDİSLİK</h3>
+        <ul class="flex flex-col gap-2 font-body-sm text-body-sm text-on-surface-variant">
+          <li><a class="hover:text-primary transition-colors" href="about.html">Hakkımızda</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">Tarihçe & Miras (1978'den Bugüne)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html#makine-parki">Üretim & Makine Parkı</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html#kalite">Kalite Kontrol & Çekme Testleri</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html#ozel-uretim">Özel Mühendislik İmalatı</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html#kapasite-tablosu">E-Katalog İndir (PDF)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">B2B İletişim Kanalları</a></li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col gap-space-sm">
+        <h3 class="font-title-md text-title-md uppercase tracking-wider text-primary border-b border-outline-variant/30 pb-2 mb-2 font-bold">GENEL MERKEZ & B2B İLETİŞİM</h3>
+        <div class="flex flex-col gap-3 font-body-sm text-body-sm text-on-surface-variant">
+          <div class="flex items-start gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">location_on</span>
+            <span>Gebze Plastikçiler OSB 6. Cadde 62. Sokak No:8 Gebze / Kocaeli / Türkiye</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary">call</span>
+            <span class="font-data-mono text-data-mono font-bold text-primary">+90 262 751 35 55</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-[#25D366]">chat</span>
+            <a class="font-data-mono text-data-mono font-bold text-primary hover:text-[#25D366]" href="https://wa.me/905326128383" target="_blank">+90 532 612 83 83 (WhatsApp)</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-[#229ED9]">send</span>
+            <a class="font-data-mono text-data-mono font-bold text-primary hover:text-[#229ED9]" href="https://t.me/share/url?url=https%3A%2F%2Fderyamensucat.com.tr&text=Merhaba" target="_blank">@deryamensucat (Telegram)</a>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
+            <span class="font-data-mono text-data-mono">info@deryamensucat.com.tr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-[1360px] mx-auto px-margin-mobile lg:px-margin pt-space-md border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-space-sm font-label-caps text-label-caps text-on-surface-variant">
+      <p>Copyright © Derya Mensucat San. ve Tic. A.Ş. Tüm hakları saklıdır. Est. 1978.</p>
+      <div class="flex items-center gap-space-md">
+        <span>KVKK / Gizlilik Politikası</span>
+        <span>Çerez Politikası</span>
+        <span>International B2B Sales Notice</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartPage();
+    });
+
+    function renderCartPage() {
+      const cart = getCart();
+      const container = document.getElementById('cart-items-container');
+      const emptyMsg = document.getElementById('cart-empty-message');
+      const counter = document.getElementById('cart-items-counter');
+
+      if (!container) return;
+
+      counter.textContent = `${cart.length} Kalem`;
+
+      if (cart.length === 0) {
+        container.innerHTML = '';
+        emptyMsg.classList.remove('hidden');
+        emptyMsg.classList.add('flex');
+        updateMessagePreview();
+        return;
+      }
+
+      emptyMsg.classList.add('hidden');
+      emptyMsg.classList.remove('flex');
+
+      let html = '';
+      cart.forEach((item, index) => {
+        html += `
+          <div class="py-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="flex-1">
+              <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">${item.category || 'Teknik Ağ'}</span>
+              <h3 class="font-title-md text-sm font-bold text-primary mt-0.5">${item.name}</h3>
+              <span class="text-xs text-on-surface-variant">Birim: ${item.unit || 'Adet'}</span>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <!-- Stepper -->
+              <div class="flex items-center border border-outline-variant/40 rounded-lg overflow-hidden bg-surface-container-low">
+                <button onclick="updateCartItemQty('${item.id}', -1)" class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-bold">-</button>
+                <span class="w-10 text-center font-data-mono font-bold text-xs">${item.qty}</span>
+                <button onclick="updateCartItemQty('${item.id}', 1)" class="w-8 h-8 flex items-center justify-center text-primary hover:bg-surface-container font-bold">+</button>
+              </div>
+
+              <!-- Delete -->
+              <button onclick="removeCartItem('${item.id}')" title="Ürünü Çıkar" class="w-8 h-8 rounded-lg flex items-center justify-center text-on-surface-variant hover:text-error hover:bg-error/10 transition-colors">
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      updateMessagePreview();
+    }
+
+    function updateCartItemQty(id, delta) {
+      const cart = getCart();
+      const item = cart.find(i => i.id === id);
+      if (item) {
+        item.qty = Math.max(1, (parseInt(item.qty, 10) || 1) + delta);
+        saveCart(cart);
+        renderCartPage();
+      }
+    }
+
+    function getOrderDetails() {
+      return {
+        isSingleProduct: false,
+        cartItems: getCart(),
+        contact: document.getElementById('order-contact')?.value || '',
+        company: document.getElementById('order-company')?.value || '',
+        phone: document.getElementById('order-phone')?.value || '',
+        location: document.getElementById('order-location')?.value || '',
+        notes: document.getElementById('order-notes')?.value || ''
+      };
+    }
+
+    function updateMessagePreview() {
+      const preview = document.getElementById('order-message-preview');
+      if (!preview) return;
+      const details = getOrderDetails();
+      preview.textContent = generateOrderMessage(details);
+    }
+
+    function dispatchCartViaTelegram() {
+      const cart = getCart();
+      if (cart.length === 0) {
+        showToast("Teklif sepetinizde ürün bulunmuyor!", "error");
+        return;
+      }
+      const details = getOrderDetails();
+      sendTelegramOrder(details);
+    }
+
+    function dispatchCartViaWhatsApp() {
+      const cart = getCart();
+      if (cart.length === 0) {
+        showToast("Teklif sepetinizde ürün bulunmuyor!", "error");
+        return;
+      }
+      const details = getOrderDetails();
+      sendWhatsAppOrder(details);
+    }
+  </script>
+</body>
+</html>
