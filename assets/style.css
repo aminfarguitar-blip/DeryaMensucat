@@ -1,0 +1,126 @@
+/* ==========================================================================
+   DERYA MENSUCAT SANAYİ VE TİCARET A.Ş. — EST. 1978
+   Marine Industrial Precision & High-Tenacity Technical Netting
+   Pure Vanilla CSS Styling (Zero Build Step - GitHub Pages Ready)
+   ========================================================================== */
+
+:root {
+  --color-primary: #000e1d;
+  --color-primary-container: #0e2439;
+  --color-secondary: #39608f;
+  --color-secondary-container: #a2c9fe;
+  --color-tertiary: #00253c;
+  --color-tertiary-accent: #2691d4;
+  --color-background: #faf8ff;
+  --color-surface: #faf8ff;
+  --color-surface-low: #f2f3ff;
+  --color-surface-high: #e2e7ff;
+  --color-surface-lowest: #ffffff;
+  --color-text-main: #131b2e;
+  --color-text-muted: #43474d;
+  --color-whatsapp: #25D366;
+  --color-telegram: #229ED9;
+  --color-border: #c4c6cd;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--color-text-main);
+  background-color: var(--color-background);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism & Depth */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(196, 198, 205, 0.4);
+}
+
+.glass-panel-dark {
+  background: rgba(14, 36, 57, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f3ff;
+}
+::-webkit-scrollbar-thumb {
+  background: #a2c9fe;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #39608f;
+}
+
+/* Selection Highlight */
+::selection {
+  background-color: #a2c9fe;
+  color: #001c38;
+}
+
+/* Navigation active indicator */
+.nav-link.active {
+  background-color: var(--color-primary-container);
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 0.5rem;
+}
+
+/* Animations */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
+
+/* Telegram Brand Styling */
+.bg-telegram {
+  background-color: #229ED9;
+}
+.bg-telegram:hover {
+  background-color: #1e8dc3;
+}
+.text-telegram {
+  color: #229ED9;
+}
+
+/* Toast Message */
+#global-toast {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Quantity Stepper Input Styling */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Floating Quick Actions */
+.floating-actions-container {
+  box-shadow: 0 10px 25px -5px rgba(14, 36, 57, 0.25);
+}
